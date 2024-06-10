@@ -45,6 +45,11 @@ img {
   height: auto;
 }
 
+button {
+  font-family: inherit;
+  display: block;
+}
+
 input {
   font-family: inherit;
 }
@@ -61,8 +66,10 @@ section {
 
 .header-nav {
 }
+
 .header-title {
 }
+
 .header-list {
   display: flex;
   align-items: center;
@@ -75,17 +82,23 @@ section {
 }
 
 .hero {
-  background: #fff;
 }
 
 .hero-back {
+  background-image: linear-gradient(
+      rgba(244, 244, 244, 0.7),
+      rgba(244, 244, 244, 0.7)
+    ),
+    url(./img/mariya-pryjmachenko-1.png);
   border-radius: 42px;
   width: 1296px;
   height: 677px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  padding: 62px;
+  margin-bottom: 72px;
 }
 
 .hero-title {
@@ -96,6 +109,7 @@ section {
   letter-spacing: 0.03em;
   text-align: center;
   color: #000;
+  margin-bottom: 30px;
 }
 
 .hero-text {
@@ -105,6 +119,8 @@ section {
   letter-spacing: 0.05em;
   text-align: center;
   color: #000;
+  max-width: 566px;
+  margin-bottom: 32px;
 }
 
 .hero-button {
@@ -112,11 +128,27 @@ section {
   border-radius: 42px;
   background-color: #ff8e47;
   border: none;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .hero-sponsors {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 140px;
+  align-items: center;
+  overflow: clip;
 }
 
+.sponsors-icon {
+  display: block;
+  width: 156px;
+  height: 40px;
+}
 .hero-subtitle {
   font-weight: 500;
   font-size: 24px;
@@ -126,13 +158,17 @@ section {
 
 .hero-sponsors-list {
   display: flex;
-  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+
+  flex-shrink: 0;
 }
 
 .sponsors-list-item {
 }
 
 .hero-about-list {
+  text-align: center;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -141,6 +177,14 @@ section {
   gap: 60px;
   width: 736px;
   height: 524px;
+}
+
+.hero-about-list::before {
+  content: url(./img/Flowerleft.svg);
+}
+
+.hero-about-list::after {
+  content: url(./img/Flowerright.svg);
 }
 
 .about-list-item {
@@ -222,57 +266,143 @@ section {
   border: none;
 }
 .equipment-title {
-  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 80px;
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .equipment-item {
+  padding: 24px;
   border-radius: 42px;
   width: 1296px;
   height: 414px;
   background-color: #fff;
 }
 .equipment-subtitle {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .equipment-subtitle-text {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 .equipment-content {
+  display: flex;
+  gap: 72px;
 }
 .equipment-image {
 }
 .equipment-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.equipment-text-content > ul {
+  display: flex;
+  flex-direction: row;
 }
 .equipment-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
+
 .equipment-svg-desc {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
+
 .about-wrap {
+  display: flex;
+  flex-direction: row;
 }
 .about-image {
 }
 .about-text-wrap {
+  line-height: 2;
+  letter-spacing: 0.02em;
 }
 .about-title {
+  font-weight: 400;
+  line-height: 1;
 }
 .auction-title {
 }
 .auction-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .auction-item {
+  width: 634px;
+  height: 436px;
+  border-radius: 42px;
+  background-color: #88d3fc;
 }
+
 .auction-card {
+  text-align: center;
+  align-content: end;
+  padding: 60px;
+  height: 436px;
+}
+
+.auction-card-wrap {
+  margin-top: 62px;
+  display: flex;
+  flex-direction: row;
+  gap: 42px;
+  justify-content: center;
+}
+
+.auction-card-button {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000;
+  padding: 20px 60px;
+  border-radius: 42px;
+  border: none;
 }
 .auction-card-subtitle {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .auction-card-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
-.auction-card-wrap {
-}
+
 .reviews-title {
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 .reviews-wrap {
+  display: flex;
 }
 .reviews-card {
 }
@@ -283,12 +413,41 @@ section {
 .reviews-text {
 }
 .cta-card {
+  align-content: end;
+  padding: 64px 0;
+  border-radius: 42px;
+  width: 1296px;
+  height: 677px;
+  background: rgba(255, 255, 255, 0.7);
 }
 .cta-title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 30px;
 }
 .cta-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 2.1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 132px;
 }
 .cta-butt {
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000;
+  padding: 20px 60px;
+  border-radius: 42px;
+  border: none;
+  background-color: #ff8e47;
 }
 .footer-content {
 }
