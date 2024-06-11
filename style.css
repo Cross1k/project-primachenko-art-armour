@@ -258,6 +258,22 @@ section {
 .small svg {
   width: 155px;
   height: 96px;
+  transition: 400ms ease;
+}
+
+.small:hover .info-small-up,
+.small:hover .info-small-down {
+  width: 183px;
+  height: 114px;
+  fill: #fff;
+}
+
+.small:hover .card-title,
+.small:hover .card-text,
+.medium:hover .card-title,
+.medium:hover .card-text {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .medium {
@@ -268,6 +284,7 @@ section {
 .medium svg {
   width: 170px;
   height: 49px;
+  transition: 400ms ease;
 }
 
 .medium:hover .info-medium-down,
@@ -332,6 +349,35 @@ section {
   bottom: 0;
 }
 
+.card-learn-more {
+  width: 228px;
+  border-radius: 42px;
+  padding: 20px 60px;
+  outline: none;
+  border: none;
+  background: #fff;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  /* scale: 0; */
+  transition: opacity 400ms ease;
+}
+
+.small:hover .card-learn-more,
+.medium:hover .card-learn-more {
+  pointer-events: all;
+  opacity: 1;
+  /* scale: 1; */
+}
+
 .equipment {
   background-color: #88d3fc;
 }
@@ -341,6 +387,7 @@ section {
   line-height: 0.89;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  transition: opacity 400ms ease;
 }
 
 .card-title.main {
@@ -358,6 +405,7 @@ section {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  transition: opacity 400ms ease;
 }
 
 .card-text.main {
