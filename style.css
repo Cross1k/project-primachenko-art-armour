@@ -48,6 +48,7 @@ img {
 button {
   font-family: inherit;
   display: block;
+  cursor: pointer;
 }
 
 input {
@@ -146,6 +147,7 @@ section {
 
 .sponsors-icon {
   display: block;
+
   width: 156px;
   height: 40px;
 }
@@ -160,11 +162,12 @@ section {
   display: flex;
   gap: 24px;
   align-items: center;
-
+  justify-content: center;
   flex-shrink: 0;
 }
 
 .sponsors-list-item {
+  margin: 0 auto;
 }
 
 .hero-about-list {
@@ -177,14 +180,19 @@ section {
   gap: 60px;
   width: 736px;
   height: 524px;
+  position: relative;
 }
 
 .hero-about-list::before {
   content: url(./img/Flowerleft.svg);
+  position: absolute;
+  transform: translatex(-200%);
 }
 
 .hero-about-list::after {
   content: url(./img/Flowerright.svg);
+  position: absolute;
+  transform: translatex(200%);
 }
 
 .about-list-item {
@@ -219,23 +227,109 @@ section {
   border-radius: 42px;
   width: 306px;
   border-radius: 42px;
-  padding: 21px 20px;
+  padding: 20px 20px;
   align-items: center;
   justify-content: center;
   background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card svg {
+  position: absolute;
+}
+
+.info-small-up {
+  top: 0;
+  left: 0;
+}
+
+.info-small-down {
+  right: -10px;
+  bottom: 0;
+  rotate: -6.7deg;
 }
 
 .small {
   height: 306px;
+  transition: background-color 400ms ease;
+}
+
+.small svg {
+  width: 155px;
+  height: 96px;
 }
 
 .medium {
   height: 390px;
+  transition: background-color 400ms ease;
+}
+
+.medium svg {
+  width: 170px;
+  height: 49px;
+}
+
+.medium:hover .info-medium-down,
+.medium:hover .info-medium-up {
+  fill: #fff;
+  width: 192px;
+  height: 55px;
+}
+
+.info-medium-up {
+  top: 50px;
+}
+
+.info-medium-down {
+  bottom: 50px;
 }
 
 .large {
   width: 636px;
   height: 720px;
+  gap: 68px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 400ms ease;
+}
+
+.small:hover,
+.medium:hover,
+.large:hover {
+  background-color: #ff8e47;
+}
+
+.info-large-up {
+  width: 168px;
+  height: 172px;
+  left: 20px;
+  top: 20px;
+  transition: 400ms ease;
+}
+
+.large:hover .info-large-up {
+  fill: #fff;
+  width: 192px;
+  height: 204px;
+  left: 0;
+  top: 0;
+}
+
+.info-large-down {
+  width: 168px;
+  height: 172px;
+  right: 20px;
+  bottom: 20px;
+  transition: 400ms ease;
+}
+
+.large:hover .info-large-down {
+  fill: #fff;
+  width: 192px;
+  height: 204px;
+  right: 0;
+  bottom: 0;
 }
 
 .equipment {
@@ -249,6 +343,15 @@ section {
   text-transform: uppercase;
 }
 
+.card-title.main {
+  font-size: 140px;
+  transition: font-size 400ms ease;
+}
+
+.large:hover .card-title.main {
+  font-size: 150px;
+}
+
 .card-text {
   font-weight: 300;
   font-size: 16px;
@@ -256,15 +359,29 @@ section {
   letter-spacing: 0.02em;
   text-align: center;
 }
-.info-main-card {
-  font-size: 140px;
+
+.card-text.main {
+  max-width: 246px;
+  transition: letter-height 400ms ease, font-size 400ms ease;
 }
+
+.large:hover .card-text.main {
+  font-size: 15px;
+  line-height: 1.73;
+}
+
 .card-button {
   padding: 20px 60px;
   border-radius: 42px;
   background-color: #ff8e47;
   border: none;
+  transition: background-color 400ms ease;
 }
+
+.large:hover .card-button {
+  background-color: #fff;
+}
+
 .equipment-title {
   text-align: center;
   margin-bottom: 80px;
