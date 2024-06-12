@@ -378,9 +378,6 @@ section {
   transform: scale(1);
 }
 
-.equipment {
-  background-color: #88d3fc;
-}
 .card-title {
   font-weight: 500;
   font-size: 90px;
@@ -430,6 +427,10 @@ section {
   background-color: #fff;
 }
 
+.equipment {
+  background-color: #88d3fc;
+}
+
 .equipment-title {
   text-align: center;
   margin-bottom: 80px;
@@ -438,6 +439,13 @@ section {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
+.equipment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .equipment-item {
   padding: 24px;
   border-radius: 42px;
@@ -464,18 +472,37 @@ section {
 .equipment-content {
   display: flex;
   gap: 72px;
+  margin-top: 40px;
 }
 .equipment-image {
 }
 .equipment-text-content {
   display: flex;
   flex-direction: column;
+  gap: 64px;
+  justify-content: space-evenly;
+  width: 618px;
+}
+
+.quipment-svg {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 14px;
 }
 
 .equipment-text-content > ul {
   display: flex;
   flex-direction: row;
+  gap: 54px;
+  justify-content: space-evenly;
 }
+
+.equipment-text-content li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .equipment-text {
   font-weight: 300;
   font-size: 16px;
