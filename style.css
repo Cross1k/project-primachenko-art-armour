@@ -446,12 +446,28 @@ section {
   gap: 16px;
 }
 
+.equipment-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipment-button-svg {
+  width: 40px;
+  height: 40px;
+}
+
 .equipment-item {
   padding: 24px;
   border-radius: 42px;
   width: 1296px;
   height: 414px;
   background-color: #fff;
+  position: relative;
 }
 .equipment-subtitle {
   display: inline-block;
