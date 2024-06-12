@@ -450,6 +450,8 @@ section {
   position: absolute;
   top: 16px;
   right: 16px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
