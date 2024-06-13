@@ -469,9 +469,11 @@ section {
   padding: 24px;
   border-radius: 42px;
   width: 1296px;
+  /* height: 72px; */
   height: 414px;
   background-color: #fff;
   position: relative;
+  overflow: hidden;
 }
 .equipment-subtitle {
   display: inline-block;
@@ -502,6 +504,7 @@ section {
   gap: 64px;
   justify-content: space-evenly;
   width: 618px;
+  position: relative;
 }
 
 .quipment-svg {
@@ -528,6 +531,15 @@ section {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.equipment-text-content::after {
+  content: "";
+  width: 618px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
 }
 
 .equipment-svg-desc {
@@ -691,25 +703,55 @@ section {
   line-height: 1.25;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 80px;
 }
 .reviews-wrap {
   display: flex;
+  gap: 24px;
+  overflow: hidden;
 }
 .reviews-card {
+  width: 416px;
+  height: 520px;
+  flex-shrink: 0;
 }
 .reviews-image {
+  border-radius: 24px;
+  width: auto;
+  margin-bottom: 24px;
 }
 .reviews-subtitle {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 .reviews-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.02em;
 }
+
+.reviews-arrows {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .cta-card {
   align-content: end;
   padding: 64px 0;
   border-radius: 42px;
   width: 1296px;
   height: 677px;
-  background: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(./img/maria-prymachenko-cta.png);
 }
 .cta-title {
   font-weight: 400;
@@ -740,21 +782,145 @@ section {
   border: none;
   background-color: #ff8e47;
 }
+
+footer {
+  background-color: #444;
+  padding: 50px 72px 40px;
+}
+
+.footer-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
 .footer-content {
 }
+
 .footer-links {
+  display: flex;
+  gap: 58px;
 }
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-list-item a {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
 .subscribe-form {
 }
 .subscribe-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
 }
 .form-email {
+  border: 1px solid #fff;
+  border-radius: 42px 0 0 42px;
+  padding: 16px 32px;
+  background-color: transparent;
+  height: 56px;
+  width: 382px;
 }
+
+.form-email::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: #fff;
+  padding: 16px 32px;
+}
+
 .subscribe-button {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0 42px 42px 0;
+  padding: 16px 34px;
 }
+
+.footer-email-wrap {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-check-wrap {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.03em;
+  color: #fff;
+  width: 541px;
+}
+
+.footer-check-wrap span {
+}
+
+.footer-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  background-color: #000;
+  fill: transparent;
+}
+
+.footer-checkbox:checked + .footer-label > .footer-span {
+  background-color: #fff;
+  fill: #fff;
+}
+
+.footer-input-button {
+  display: flex;
+}
+
 .social-links {
 }
+
 .social-links-item {
 }
+
 .policy-text {
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
